@@ -1,16 +1,7 @@
-# state_managements
+# Counter examples
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Counter examples with diferent state management
+<p align="center">
+  <img src="https://github.com/CarLeonDev/state_managements/raw/master/app_capture.png" height="500" alt="App capture" />
+  <img src="https://github.com/CarLeonDev/state_managements/raw/master/reactter_capture.png" height="500" alt="Reactter capture" />
+</p>
