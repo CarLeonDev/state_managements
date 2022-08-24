@@ -36,23 +36,24 @@ class MyApp extends StatelessWidget {
           title: const Text("Counter example with:"),
         ),
         body: ListView.builder(
-            itemCount: stateManagements.length,
-            itemBuilder: (BuildContext context, int index) {
-              final title = stateManagements.keys.toList()[index];
-              final build = stateManagements.values.toList()[index];
+          itemCount: stateManagements.length,
+          itemBuilder: (BuildContext context, int index) {
+            final title = stateManagements.keys.toList()[index];
+            final build = stateManagements.values.toList()[index];
 
-              return ListTile(
-                onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => build(),
-                  ),
+            return ListTile(
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => build(),
                 ),
-                contentPadding:
-                    const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-                title: Text(title),
-              );
-            }),
+              ),
+              contentPadding:
+                  const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+              title: Text(title),
+            );
+          },
+        ),
       ),
     );
   }

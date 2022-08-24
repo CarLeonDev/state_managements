@@ -7,9 +7,8 @@ class RiverpodCounter extends StatelessWidget {
   const RiverpodCounter({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return const ProviderScope(child: RiverpodCounterInner());
-  }
+  Widget build(BuildContext context) =>
+      const ProviderScope(child: RiverpodCounterInner());
 }
 
 class RiverpodCounterInner extends ConsumerWidget {
@@ -17,10 +16,6 @@ class RiverpodCounterInner extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    ref.watch(counterProvider);
-
-    void increment() => ref.read(counterProvider.state).state++;
-
     return Scaffold(
       appBar: AppBar(
         title: const Text("Counter with Riverpod"),
@@ -28,10 +23,8 @@ class RiverpodCounterInner extends ConsumerWidget {
       body: Center(
         child: Consumer(
           builder: (context, ref, child) {
-            final count = ref.watch(counterProvider.state).state;
-
             return Text(
-              '$count',
+              '${ref.watch(counterProvider.state).state}',
               style: Theme.of(context).textTheme.headlineMedium,
               textAlign: TextAlign.center,
             );
@@ -39,7 +32,8 @@ class RiverpodCounterInner extends ConsumerWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: increment,
+        onPressed: () =>
+            ref.read(counterProvider.notifier).update((state) => state + 1),
         child: const Icon(Icons.add),
       ),
     );

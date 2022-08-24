@@ -10,12 +10,6 @@ class SetStateCounter extends StatefulWidget {
 class SetStateCounterState extends State<SetStateCounter> {
   int counter = 0;
 
-  void increment() {
-    setState(() {
-      counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +24,7 @@ class SetStateCounterState extends State<SetStateCounter> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: increment,
+        onPressed: () => setState(() => counter++),
         child: const Icon(Icons.add),
       ),
     );

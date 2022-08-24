@@ -3,7 +3,6 @@ import 'package:flutter_reactter/flutter_reactter.dart';
 
 class CounterContext extends ReactterContext {
   late final counter = UseState(0, this);
-  void increment() => counter.value++;
 }
 
 class ReactterCounter extends ReactterComponent<CounterContext> {
@@ -26,7 +25,7 @@ class ReactterCounter extends ReactterComponent<CounterContext> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: ctx.increment,
+        onPressed: () => ctx.counter.value++,
         child: const Icon(Icons.add),
       ),
     );

@@ -5,10 +5,10 @@ part 'mobx_counter.g.dart';
 
 abstract class CounterAbstract with Store {
   @observable
-  int value = 0;
+  int count = 0;
 
   @action
-  void increment() => value++;
+  void increment() => count++;
 }
 
 class Counter = CounterAbstract with _$Counter;
@@ -22,12 +22,12 @@ class MobxCounter extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Counter with Getx"),
+        title: const Text("Counter with Mobx"),
       ),
       body: Center(
         child: Observer(
           builder: (_) => Text(
-            '${counter.value}',
+            '${counter.count}',
             style: Theme.of(context).textTheme.headlineMedium,
             textAlign: TextAlign.center,
           ),
