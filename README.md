@@ -9,7 +9,7 @@ Counter examples with different state management
 | **State Management** |          **Lines Num.** |
 |----------------------|------------------------:|
 | **Bloc**             |                      54 |
-| **Getx**             |                      35 |
+| **Getx**             |                      34 |
 | **Mobx**             | 42 + 47(StoreGenerator) |
 | **Provider**         |                      46 |
 | **Reactter**         |                      33 |

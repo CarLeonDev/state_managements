@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 class CounterController extends GetxController {
   var count = 0.obs;
-  void increment() => count++;
 }
 
 class GetxCounter extends StatelessWidget {
@@ -27,7 +26,7 @@ class GetxCounter extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: counter.increment,
+        onPressed: () => counter.count++,
         child: const Icon(Icons.add),
       ),
     );
