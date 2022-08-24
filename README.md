@@ -3,7 +3,7 @@
 Counter examples with different state management
 <p align="center">
   <img src="https://github.com/CarLeonDev/state_managements/raw/master/app_capture.png" height="500" alt="App capture" />
-  <img src="https://github.com/CarLeonDev/state_managements/raw/master/reactter_capture.png" height="500" alt="Reactter capture" />
+  <img src="https://github.com/CarLeonDev/state_managements/raw/master/setstate_capture.png" height="500" alt="setState capture" />
 </p>
 
 | **State Management** |          **Lines Num.** |
